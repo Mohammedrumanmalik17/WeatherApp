@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height: 100vh;
+   
+   
+}
+.image{
+    background-image: url('weather-bg2.jpg');
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    width: 100vw;
+    height:100vh;
+}
+#datetime{
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+   
+    position: absolute;
+    left: 78%; 
+    top: 5%;   
+}
+
+main .col:hover{
+        cursor: grab;
+
+}
+nav ul li.nav-item a.nav-link,a.nav-link-active {   
+   text-decoration: none;
+
+   font-size: 18px;
+   font-weight: 500 ;
+   color:white;
+   text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 212);
+    
+
+}
+nav ul li.nav-item a.nav-link:hover {
+    color: rgb(130, 157, 238);
+    text-decoration: underline;
+    text-transform: uppercase;
+    
+
+}
+
+#navbarSupportedContent ul li.nav-item a.nav-link{
+    color: white;
+}
+
+
+
+ button, #btn1:hover,#btn2:hover,#btn3:hover{
+    color: darkmagenta;
+    background-color: rgba(222, 184, 135, 0.514);
+    font-weight: 700;
+    text-decoration: underline;
+    
+    
+}
+.container-about{
+    width: 700px;
+    height: 500px;
+    border: 5px solid burlywood;
+    border-radius: 2px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: rgb(255, 0, 230);
+    font-size: 19px;
+    font-weight: 400;
+    overflow:hidden;
+    flex-direction: column;
+    position: relative;
+    line-height: 35px;
+
+    
+}
+main .col:hover{
+    animation: pulse 2s ease-in-out;
+}
+@keyframes pulse {
+    0%, 100%{
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+}
+nav a {
+    font-weight:700 ;
+    
+}
+#song{
+    width: 220px;
+    height: 25px;
+
+    
+    font-size: 16px;
+    background-color: lightcyan;
+    color: darkmagenta;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+   
+}
+.image, #weather-name{
+    color: aliceblue;
+    position:absolute;
+    box-shadow: 0 0 10px #002fff,0 0 20px #bc0087;
+
+    
+}
+
+ #song:hover{
+    color: rgb(255, 47, 113); 
+    box-shadow: 0 0 20px #0026ff,0 0 40px #bc0087;
+    background-color: white;
+    border: none;
+    outline: none   ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+
+}   
+h1{
+    color: #4500bc;
+    text-shadow: 0 0 13px white, 0 0 20px whitesmoke;
+
+}
