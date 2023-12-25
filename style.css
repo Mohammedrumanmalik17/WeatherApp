@@ -22,13 +22,15 @@ body{
     height:100vh;
 }
 #datetime{
-    font-size: 30px;
+
+
+
+    font-size: 21px;
     font-weight: 700;
-    color:white;
-   
-    position: absolute;
-    left: 78%; 
-    top: 5%;   
+    color: white;
+    position:absolute;
+    left: 68%;
+    top: 1.2%;
 }
 
 main .col:hover{
@@ -101,8 +103,10 @@ nav a {
     
 }
 #song{
-    width: 220px;
-    height: 25px;
+   
+
+    width: 230px;
+    height: 27px;
 
     
     font-size: 16px;
