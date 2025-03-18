@@ -1,47 +1,7 @@
 
-// const options = {
-// method: 'GET',
-// headers: {
-// 'content-type': 'application/octet-stream',
-// 'X-RapidAPI-Key': '763c810bdfmshb9f4669b80c3925p18d818jsn3db5be365864',
-// 'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-// }
-// };
-// const getWeather = (city) =>{
-//     cityName.innerHTML = city
+const proxy = "http://localhost:8080/"; 
+const apiKey = "YOUR_OPENWEATHER_APIKEY"; 
 
-// fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city='+ city, options)
-//   .then((response) => response.json())
-//   .then((response) => {
-//     console.log(response)
-//     temp.innerHTML = response.temp
-//     temp2.innerHTML = response.temp
-//     feels_like.innerHTML = response.feels_like 
-//     humidity.innerHTML= response.humidity
-//     humidity2.innerHTML= response.humidity
-//     max_temp.innerHTML = response.max_temp
-//     min_temp.innerHTML = response.min_temp 
-//     sunrise.innerHTML = response.sunrise
-//     sunset.innerHTML = response.sunset
-//     temp.innerHTML = response.temp 
-//     wind_degrees.innerHTML = response.wind_degrees
-//     wind_speed.innerHTML = response.wind_speed
-//     wind_speed2.innerHTML = response.wind_speed
-//   })
-//   .catch((err) => console.error(err));
-// }
-// submit.addEventListener("click",(e)=>{
-//     e.preventDefault()
-//     getWeather(city.value)
-// })
-// getWeather("Delhi")
-
-
-
-const proxy = "http://localhost:8080/"; // Use Local CORS Proxy (if needed)
-const apiKey = "c9aec8c232f1b77d0092ee92504dc8bf"; // Your OpenWeatherMap API Key
-
-// Get elements
 const cityNameEl = document.getElementById("cityName");
 const tempEl = document.getElementById("temp");
 const temp2El = document.getElementById("temp2");
@@ -67,7 +27,7 @@ const getWeather = (city) => {
             return response.json();
         })
         .then(data => {
-            console.log(data); // Debugging output
+            console.log(data);
 
             if (data.main && data.wind && data.sys) {
                 tempEl.innerHTML = `${data.main.temp}°C`;
@@ -81,7 +41,6 @@ const getWeather = (city) => {
                 windSpeedEl.innerHTML = `${data.wind.speed} m/s`;
                 windSpeed2El.innerHTML = `${data.wind.speed} m/s`;
 
-                // Convert sunrise & sunset time (UNIX timestamp to HH:MM AM/PM)
                 sunriseEl.innerHTML = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
                 sunsetEl.innerHTML = new Date(data.sys.sunset * 1000).toLocaleTimeString();
             } else {
